@@ -14,9 +14,11 @@ public class Anime {
     private Long id;
 
     private String name;           // 名称
-    private String image;          // 图片URL
+    private String image;          // 封面图片URL
+    private String bgImg;         // 背景图片URL
     private String description;    // 简介
     private String evaluation;    // 评价
-    private String rating;         // 评分
+    private String rating;        // 评分
     private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

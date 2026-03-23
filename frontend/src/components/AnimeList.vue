@@ -1,6 +1,7 @@
 <template>
   <div class="anime-container">
     <div class="header">
+      <button class="home-btn" @click="goHome">← 首页</button>
       <h1>动漫管理</h1>
       <button class="create-btn" @click="showCreateModal = true">+ 创建</button>
     </div>
@@ -120,6 +121,10 @@ const goDetail = (id) => {
   router.push(`/anime/${id}`)
 }
 
+const goHome = () => {
+  router.push('/')
+}
+
 const handleFileChange = (event) => {
   const file = event.target.files[0]
   if (file) {
@@ -214,6 +219,26 @@ onMounted(fetchList)
   margin-bottom: 20px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.home-btn {
+  padding: 8px 16px;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background: #1976D2;
+}
+
 .header h1 {
   color: #333;
 }
@@ -232,6 +257,8 @@ onMounted(fetchList)
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .anime-card {

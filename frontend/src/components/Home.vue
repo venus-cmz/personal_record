@@ -10,7 +10,6 @@
     <div class="content">
       <div class="nav-grid">
         <div class="nav-item" @click="goAnime">
-          <div class="nav-icon">🎬</div>
           <div class="nav-label">动漫</div>
         </div>
       </div>

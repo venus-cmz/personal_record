@@ -17,4 +17,5 @@ public class User {
     private String password;
     private String nickname;
     private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
